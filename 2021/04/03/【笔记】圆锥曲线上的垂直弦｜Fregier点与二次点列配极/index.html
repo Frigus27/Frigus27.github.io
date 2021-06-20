@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="【笔记】圆锥曲线上的垂直弦｜Frégier点与二次点列配极"><meta name="keywords" content="平面几何,研究笔记,圆锥曲线"><meta name="author" content="霜夏"><meta name="copyright" content="霜夏"><title>【笔记】圆锥曲线上的垂直弦｜Frégier点与二次点列配极 | 霜夏酱の小屋</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="manifest" href="/manifest.json"><link rel="manifest" href="/manifest.json"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  hexoVersion: '4.2.1'
+} </script><meta name="generator" content="Hexo 4.2.1"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二次曲线配极理论的简单介绍"><span class="toc-number">2.</span> <span class="toc-text">二次曲线配极理论的简单介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Fregier定理及其证明"><span class="toc-number">3.</span> <span class="toc-text">Frégier定理及其证明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Fregier点的轨迹、更深入的研究、展望"><span class="toc-number">4.</span> <span class="toc-text">Frégier点的轨迹、更深入的研究、展望</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#后记"><span class="toc-number">5.</span> <span class="toc-text">后记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文献"><span class="toc-number">6.</span> <span class="toc-text">参考文献</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/image/avater.jpg"></div><div class="author-info__name text-center">霜夏</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://www.zhihu.com/people/frigus27" target="_blank" rel="noopener">在知乎上关注我……！</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">6</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">6</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">3</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/image/background.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">霜夏酱の小屋</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">存档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/about">关于</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">【笔记】圆锥曲线上的垂直弦｜Frégier点与二次点列配极</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-04-03</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/">平面几何研究笔记</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">1.6k</span><span class="post-meta__separator">|</span><span>阅读时长: 4 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p><img src="https://pic4.zhimg.com/80/v2-163201e385f8a88738a3286d4a5e781e.png" alt="标题图"></p>
+<p><a href="https://zhuanlan.zhihu.com/p/362160262" target="_blank" rel="noopener">-&gt;本文知乎版</a></p>
+<a id="more"></a>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在高考圆锥曲线中，我们时常可以看见以下的一个构型：</p>
+<p>过椭圆上一点，作椭圆的两条互相垂直的弦，连接这两条弦与椭圆的第二交点，则该连线过一个定点．</p>
+<p>例如，2020山东卷的压轴就用到了这个构型：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-d0114acc4d1624503b14001959933b59.jpg" alt="Image"></p>
+<p>事实上，这个定理可以说是家喻户晓了——它就是<strong>Frégier定理</strong>．对应的，当圆锥曲线上的这一点为$P$时，这个定点被称为点$P$关于圆锥曲线的<strong>Frégier点</strong>．</p>
+<p>那么，怎么证明这个性质呢？</p>
+<p>当然可以用坐标方法进行证明，但是夏夏绝对不满意！事实上，<strong>二次曲线的配极</strong>才是它最本质的特征．</p>
+<h1 id="二次曲线配极理论的简单介绍"><a href="#二次曲线配极理论的简单介绍" class="headerlink" title="二次曲线配极理论的简单介绍"></a>二次曲线配极理论的简单介绍</h1><p>我们都知道点的配极（即<strong>极线</strong>（polar））：在解析几何中，它通常以<strong>切线</strong>或是<strong>切点弦</strong>的方程出现；在射影几何中，它可以表示使与过该点任作直线与圆锥曲线相交而成的两公共点分该点及此点形成调和点列的点的轨迹（这什么鬼）．类似地，直线的配极（即<strong>极点</strong>（pole））也可以定义．</p>
+<p>然而很多人不知道的是：对圆锥曲线，也可以定义配极的概念．为此，我们先介绍<strong>二阶点列</strong>这一概念[2]：</p>
+<blockquote>
+<p><strong>定义</strong>　成射影对应的两个线束对应直线交点的轨迹称为二阶点列．</p>
+</blockquote>
+<p>类似地，我们也可以定义<strong>二阶线束</strong>，只不过此时的「轨迹」指这些直线所包络的图形．</p>
+<p>然而，作出图像，很容易发现两者对应的曲线是等价的；事实上，对于非退化情形，两者均对应圆或圆锥曲线；退化的情形是平凡的．将两者放在一起看，可知两者对应的曲线都是<strong>二次曲线</strong>．</p>
+<p>因此，我们可以想到如下定义[1]：</p>
+<blockquote>
+<p><strong>定义</strong>　对二次曲线 $\omega$ 上任一点$P$，作其关于二次曲线 $\psi$ 的极线$l$；当$P$在 $\omega$ 上运动时，$l$包络一个曲线，这个曲线称为二次曲线$\omega$关于二次曲线$\psi$的<strong>极曲线</strong>（polar curve）．</p>
+</blockquote>
+<p>此外，通过对圆的情况的验证并结合射影变换，我们很容易得出定理：</p>
+<blockquote>
+<p><strong>定理1</strong>　二次曲线关于另一二次曲线的极曲线也是二次曲线．</p>
+</blockquote>
+<p>关于这个定理，完整的证明可以参见[1]．</p>
+<p>特别地，如果该变换所关于的二次曲线是一个圆，我们可以得到以下结论：</p>
+<blockquote>
+<p><strong>特例</strong>　二次曲线关于圆的极曲线也是二次曲线；当圆的圆心在二次曲线内部时，该极曲线是椭圆；当圆心在外部时，该极曲线是双曲线；当圆心在其上时，该极曲线是抛物线．</p>
+</blockquote>
+<p>完整的证明也可以参见[1]．</p>
+<p>此外，由定理1，我们可以得到一个简单的推论：</p>
+<blockquote>
+<p><strong>推论</strong>　对二次曲线上任一点，其关于另一二次曲线的极线是该二次曲线的极曲线的一条切线．</p>
+</blockquote>
+<h1 id="Fregier定理及其证明"><a href="#Fregier定理及其证明" class="headerlink" title="Frégier定理及其证明"></a>Frégier定理及其证明</h1><p>现在，我们可以来构建Frégier定理了．为了叙述清晰，我们对定理进行表述：</p>
+<blockquote>
+<p><strong>定理</strong>（Frégier） 给定圆锥曲线 $\omega$ 及其上一点$P$，则对圆锥曲线上任一条弦$AB$，若$\angle APB=90°$，则动弦$AB$过定点．</p>
+</blockquote>
+<p><img src="https://pic4.zhimg.com/80/v2-b727a3fc69bd3a3dd4fe4b45066d5baa.png" alt="Frégier定理图"></p>
+<p><a href="https://www.geogebra.org/m/menzh4ay" target="_blank" rel="noopener">（点击这里可以查看动态演示．）</a></p>
+<p>为证明该定理，我们先要引入一个引理：</p>
+<blockquote>
+<p><strong>引理</strong>　若抛物线的两条切线相互垂直，则这两条切线的交点在抛物线的准线上．</p>
+</blockquote>
+<p>这不过是<strong>Monge圆</strong>在抛物线上的退化．</p>
+<p><strong>Frégier定理的证明</strong>　将 $\omega$ 对以$P$为圆心的任一个圆配极，记配极后的图形为$\omega’$，$PA\mapsto A^\infty$，$PB\mapsto B^\infty$．由定理1及其特例知$\omega’$也是二次曲线．</p>
+<p>因为$PA$、$PB$过点$P$，故$A^\infty$、$B^\infty$都是无穷远点，它们的连线是$P$的极线，即无穷远直线．</p>
+<p>现在，考虑两点$A$、$B$的极线．记它们的极线是$l_A$、$l_B$，由推论知$l_A$、$l_B$是抛物线$\omega$的切线．并且因为是关于圆的配极变换，$\angle APB=90°$，所以$l_A\bot l_B$．由引理，$l_A$与$l_B$的交点的轨迹是抛物线的准线．又其交点即为直线$AB$的极点，由<strong>La Hire定理</strong>知直线$AB$恒过抛物线$\omega’$的焦点．证毕．　$\square$</p>
+<h1 id="Fregier点的轨迹、更深入的研究、展望"><a href="#Fregier点的轨迹、更深入的研究、展望" class="headerlink" title="Frégier点的轨迹、更深入的研究、展望"></a>Frégier点的轨迹、更深入的研究、展望</h1><p>我们现在证明了Frégier点的存在性．那么，它的轨迹是什么呢？</p>
+<p>由Frégier点的构造方式，我们可以看出：对抛物线上的一点$P$，$P$的Frégier点其实是点$P$的对称直径与点$P$的法线的交点．具体证明这里从略啦～</p>
+<p>于是，我们可以得到：当点$P$运动时，其Frégier点的轨迹应当是一条与原圆锥曲线同心且相似的一条圆锥曲线．在上面的演示中也可以看出．</p>
+<p>然而，以上的结论并不是平凡的；也许，这可能暗示着Frégier点的另一种刻画方式？</p>
+<p>确实如此．几个月前，夏夏曾经问过3叔叔有关Frégier点的问题，他给出的答复是运用<strong>对合线束</strong>的概念．然而这方面我还不懂（</p>
+<p>嘛，希望以后多研究研究，先在这里留个大坑吧（逃）</p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>本篇其实是夏夏学习GOC这本书的一个笔记啦～</p>
+<p>话说事情是这样的：当时教练给同学们测试，夏夏本来对自己的解几很有信心，结果一头栽在了Frégier点上QAQ，于是就回来恶补圆锥曲线了</p>
+<p>（喂喂，解几和GOC这本书没什么关系吧（（（</p>
+<p>此外，还有就是尝试Zhihu on VSCode这个东西了，不得不说比知乎原生编辑器苏胡太多了，知乎你自己反省一下（不是）</p>
+<p>就这样啦～此致</p>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] A. V. Akopyan, A. A. Zaslavsky, translated by Alex Martsinkovsky. Geometry of Conics[B]. American Mathematical Society, 2007.</p>
+<p>[2] Sktalg.<a href="https://tieba.baidu.com/p/4356745464" target="_blank" rel="noopener">射影几何的一些东西</a>[EB/OL].数学吧,  2016</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">霜夏</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://frigus27.xyz/2021/04/03/【笔记】圆锥曲线上的垂直弦｜Fregier点与二次点列配极/">https://frigus27.xyz/2021/04/03/【笔记】圆锥曲线上的垂直弦｜Fregier点与二次点列配极/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://frigus27.xyz">霜夏酱の小屋</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/">平面几何</a><a class="post-meta__tags" href="/tags/%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/">研究笔记</a><a class="post-meta__tags" href="/tags/%E5%9C%86%E9%94%A5%E6%9B%B2%E7%BA%BF/">圆锥曲线</a></div><div class="social-share pull-right" data-disabled="google, facebook, diandian, linkedin, tencent"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="prev-post pull-left"><a href="/2021/06/01/%E4%BB%A3%E6%95%B0%EF%BC%8F%E6%95%B0%E8%AE%BA%EF%BD%9C%E4%BA%8C%E9%98%B6%E7%BA%BF%E6%80%A7%E9%80%92%E6%8E%A8%E6%95%B0%E5%88%97%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E5%B7%A5%E5%85%B7/"><i class="fa fa-chevron-left">  </i><span>代数／数论｜二阶线性递推数列的一些小工具</span></a></div><div class="next-post pull-right"><a href="/2021/01/30/%E8%AE%BA%E4%B9%B0%E4%BA%86%E4%B8%80%E4%B8%AA%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8E%E7%9A%84%E6%84%9F%E5%8F%97/"><span>论买了一个服务器之后的感受</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'false' == 'true';
+var verify = 'false' == 'true';
+var record_ip = '' == 'true';
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  recordIP:record_ip,
+  appId:'zyVAKjpgKVdU9OpG9E66I0hc-gzGzoHsz',
+  appKey:'iUM5R0QMWBJ8HNP4N4yTKrBC',
+  placeholder:'看完了文章，跟伦家嗦嗦话呗（￣︶￣）↗　',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer class="footer-bg" style="background-image: url(/image/background.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2021 By 霜夏</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
